@@ -1,3 +1,15 @@
 from django.shortcuts import render
 
-# Create your views here.
+# My views are here
+
+def store(request):
+    context = {}
+    return render(request, 'Store/store.html', context)
+
+def cart(request):
+    context = {}
+    return render(request, 'Store/cart.html', context)
+
+def checkout(request):
+    context = {}
+    return render(request, 'Store/checkout.html', context)
