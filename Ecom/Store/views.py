@@ -1,10 +1,14 @@
 from django.shortcuts import render
+from .models import *
 
 # My views are here
 
 def store(request):
-    context = {}
-    return render(request, 'Store/store.html', context)
+    products = Product.objects.all()
+    context = {'products':products}
+    return render(request, 'store/store.html', context)
+
+
 
 def cart(request):
     context = {}
